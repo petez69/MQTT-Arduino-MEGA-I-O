@@ -10,8 +10,7 @@ When an input is open/closed an MQTT message is sent to a broker
 
 Outputs can be controlled by MQTT messages
 
-This code should be considered ALPHA and use at your own risk.  The code is here to keep a backup.
-There is considerable cleanup to be done however it is functional
+This code should be considered ALPHA and use at your own risk.  The code is here to keep as a backup.  There is considerable cleanup to be done however it is functional
 
 Lots of debug available on the serial port.
 
