@@ -10,7 +10,7 @@ When an input is open/closed an MQTT message is sent to a broker
 
 Outputs can be controlled by MQTT messages
 
-This code should be considered ALPHA and use at your own risk.  The code is here to keep as a backup.  There is considerable cleanup to be done however it is functional
+This code should be considered ALPHA and use at your own risk.  The code is here to keep as a backup.  There is considerable cleanup to be done however it is functional.  I'm not a programmer but get a kick out of I0T MQTT devices.
 
 Lots of debug available on the serial port.
 
@@ -52,5 +52,9 @@ Lots of debug available on the serial port.
 ## Known Bugs: 
 
 Input A0 always reports status on boot, need to find that
+
+## Acknowledgements:
+
+In particular inspiration provided by Jonathan Oxer from Superhouse.  This code was based on his LIghtswitchMQTT controller. 
 
 
