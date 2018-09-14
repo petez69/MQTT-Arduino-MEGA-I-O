@@ -236,12 +236,7 @@ void processButtonDigital( byte buttonId )
         {
           lastActivityTime = millis();
           lastButtonPressed = buttonId;
-          Serial.print( "transition on ");
-          Serial.print( buttonId, DEC );
-          Serial.print(" (input ");
-          Serial.print( buttonArray[buttonId] );
-          Serial.println(")");
-        
+                  
           String messageString = "0";
           messageString.toCharArray(messageBuffer, messageString.length()+1);
         
@@ -260,12 +255,7 @@ void processButtonDigital( byte buttonId )
         {
           lastActivityTime = millis();
           lastButtonPressed = buttonId;
-          Serial.print( "transition on ");
-          Serial.print( buttonId, DEC );
-          Serial.print(" (input ");
-          Serial.print( buttonArray[buttonId] );
-          Serial.println(")");
-        
+                  
           String messageString = "1";
           messageString.toCharArray(messageBuffer, messageString.length()+1);
         
