@@ -41,6 +41,12 @@ Lots of debug available on the serial port.
 5. When the watchdog times trips it sends an "alive" tele command
 
    - tele/20/Status Alive
+   
+## Pin Mapping
+
+   - A0-A7, A8-A15, D40-D47 are inputs
+   
+   - D16-D23, D24-D31, D32-D39 are outputs
 
 
 ## Known Bugs: 
