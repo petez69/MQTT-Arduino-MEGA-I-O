@@ -22,25 +22,27 @@ Lots of debug available on the serial port.
 	
    - Inputs will automatically send status on pin toggle
 
-   - stat/20/Input/1 0 for pin shorted to ground
+   - stat/panelId/Input/1 0 for pin shorted to ground
 
-   - stat/20/Input/1 1 for pin open circuit (has pullups enabled)
+   - stat/panelId/Input/1 1 for pin open circuit (has pullups enabled)
 
 3. Outputs: When a payload 1 is received the output goes LOW, payload 1 sets output HIGH. panelID currently set to 20(iD)
 
-   - cmnd/20/Output/1 0  this will turn output 1 on
+   - cmnd/panelId/Output/1 0  this will turn output 1 on
    
-   - cmnd/20/Output/1 1  this will turn output 1 off
+   - cmnd/panelId/Output/1 1  this will turn output 1 off
 
 4. When an output is turned on, a response is sent back to the broker so you know the output turned on (great for NodeRed)
 
-   - Received message: cmnd/20/Output/1 0
+   - Received message: cmnd/panelId/Output/1 0
    
-   - Reply message: stat/20/Output/1 0
+   - Reply message: stat/panelId/Output/1 0
 
-5. When the watchdog times trips it sends an "alive" tele command
+5. Rudimentry LWT is implemented
 
-   - tele/20/Status Alive
+   - tele/panelId Connected-Disconnected
+   
+   - On connected, board sends all of the input statuses 
    
 ## Pin Mapping
 
