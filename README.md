@@ -28,9 +28,9 @@ Lots of debug available on the serial port.
 
 3. Outputs: When a payload 1 is received the output goes LOW, payload 1 sets output HIGH. panelID currently set to 20(iD)
 
-   - cmnd/panelId/Output/1 0  this will turn output 1 on
+   - cmnd/panelId/Output/1 1  this will turn output 1 on
    
-   - cmnd/panelId/Output/1 1  this will turn output 1 off
+   - cmnd/panelId/Output/1 0  this will turn output 1 off
 
 4. When an output is turned on, a response is sent back to the broker so you know the output turned on (great for NodeRed)
 
@@ -42,7 +42,9 @@ Lots of debug available on the serial port.
 
    - tele/panelId Connected-Disconnected
    
-   - On connected, board sends all of the input statuses 
+   - On connected, board sends all of the input statuses
+   
+6. Send TOPIC cmnd/panelID/reboot 0 and it will reboot the arduino.  tele/panelID will populate payload with rebooting.
    
 ## Pin Mapping
 
@@ -54,6 +56,8 @@ Lots of debug available on the serial port.
 ## Known Bugs: 
 
 Input A0 always reports status on boot, need to find that
+
+Considerable load testing of turning 8 outputs on and off very rapidly causes the arduino to reboot.  Not sure if this is bloated code or a buffer overflow in the MQTT client.  This kind of rapid output switching would not occur in a home automation project
 
 ## Acknowledgements:
 
